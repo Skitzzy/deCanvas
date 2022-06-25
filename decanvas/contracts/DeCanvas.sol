@@ -31,7 +31,7 @@ contract DeCanvas {
     }
 
     //Setup modifier and variable to track when to allow or disallow painting 
-    bool allowPaint = true;
+    bool public allowPaint = true;
     modifier _paintAllowed(){
         require(allowPaint == true);
     }
@@ -81,7 +81,8 @@ contract DeCanvas {
         return canvas;
     }
 
-    function endPainting() _ownerOnly {
-        allowPaint = false;
+    //Allows the owner of the contract to toggle whether painting is allowed
+    function togglePainting() _ownerOnly {
+        allowPaint = !allowPaint;
     }
 }
