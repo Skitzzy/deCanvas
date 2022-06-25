@@ -9,6 +9,10 @@ const main = async () => {
     const deCanvasContract = await deCanvasContractFactory.deploy();
     await deCanvasContract.deployed();
 
+    //testing 
+    let deCanvasTxn = await deCanvasContract.paint(10, 10, 10);
+    await deCanvasTxn.wait();
+
     console.log("deCanvas address: ", deCanvasContract.address);
 };
 

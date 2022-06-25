@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-import "../node_modules/hardhat/console.sol";
+import "hardhat/console.sol";
 
 contract DeCanvas {
     //Struct for storing data about individual pixels
@@ -26,20 +26,18 @@ contract DeCanvas {
 
     //Setup owner modifier for function calls
     address owner;
-    modifier _ownerOnly(){
-    require(msg.sender == owner);
+    modifier _ownerOnly() {
+        require(msg.sender == owner);
     }
 
-    //Setup modifier and variable to track when to allow or disallow painting 
+    //Setup modifier and variable to track when to allow or disallow painting
     bool public allowPaint = true;
-    modifier _paintAllowed(){
+    modifier _paintAllowed() {
         require(allowPaint == true);
     }
 
-
     //Runs on initial deploy
     constructor() {
-
         //Define owner of contract as the address that deployed it
         owner = msg.sender;
 
@@ -55,11 +53,11 @@ contract DeCanvas {
     }
 
     //Paint a pixel, only when allowPaint is true
-    function paint (
+    function paint(
         uint256 x,
         uint256 y,
         uint256 _colour
-    ) _paintAllowed public {
+    ) public _paintAllowed {
         //Update relevant Pixel struct in canvas
         canvas[x][y].colour = _colour;
         canvas[x][y].painter = msg.sender;
@@ -77,7 +75,7 @@ contract DeCanvas {
     }
 
     //Return the entire canvas
-    function getCanvas() public pure view returns (Pixel[][] memory) {
+    function getCanvas() public pure returns (Pixel[][] memory) {
         return canvas;
     }
 
