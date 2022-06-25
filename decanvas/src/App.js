@@ -1,4 +1,5 @@
 import Grid from './components/Grid'
+import Modal from './components/Modal'
 import './App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Grid arr={blah}/>
+      <Modal modalActive={true}/>
     </div>
   );
 }
