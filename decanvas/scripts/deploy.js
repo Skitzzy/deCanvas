@@ -13,6 +13,12 @@ const main = async () => {
     let deCanvasTxn = await deCanvasContract.paint(10, 10, 10);
     await deCanvasTxn.wait();
 
+    let deCanvasTxntwo = await deCanvasContract.paint(15, 12, 25);
+    await deCanvasTxntwo.wait();
+
+    let deCanvasget;
+    deCanvasget = await deCanvasContract.getCanvas()
+
     console.log("deCanvas address: ", deCanvasContract.address);
 };
 
