@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
 
-  const blah = {'data': [{'id': 1}, {'id': 2}, {'id': 3}]}
+  const blah = {'data': [{'key': 1}, {'key': 2}, {'key': 3}]}
 
   return (
     <div className="App">

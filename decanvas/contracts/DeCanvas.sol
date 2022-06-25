@@ -39,10 +39,13 @@ contract DeCanvas {
 
     //Runs on initial deploy
     constructor() {
+<<<<<<< HEAD
 
         //Define owner of contract as the address that deployed it
         owner = msg.sender;
 
+=======
+>>>>>>> 9f4bb91c526ba920713bede171acbea7d9685d1f
         //Initialise each pixel to white, with null address as painter
         for (uint256 x = 0; x < 100; x++) {
             for (uint256 y = 0; y < 100; y++) {
@@ -54,12 +57,21 @@ contract DeCanvas {
         console.log("DeCanvas contract deployed");
     }
 
+<<<<<<< HEAD
     //Paint a pixel, only when allowPaint is true
     function paint (
         uint256 x,
         uint256 y,
         uint256 _colour
     ) _paintAllowed public {
+=======
+    //Paint a pixel
+    function paint(
+        uint256 x,
+        uint256 y,
+        uint256 _colour
+    ) public {
+>>>>>>> 9f4bb91c526ba920713bede171acbea7d9685d1f
         //Update relevant Pixel struct in canvas
         canvas[x][y].colour = _colour;
         canvas[x][y].painter = msg.sender;
@@ -80,9 +92,12 @@ contract DeCanvas {
     function getCanvas() public pure view returns (Pixel[][] memory) {
         return canvas;
     }
+<<<<<<< HEAD
 
     //Allows the owner of the contract to toggle whether painting is allowed
     function togglePainting() _ownerOnly {
         allowPaint = !allowPaint;
     }
+=======
+>>>>>>> 9f4bb91c526ba920713bede171acbea7d9685d1f
 }
