@@ -35,9 +35,9 @@ use solidity events as storage for pixels, creating a chain of update transactio
 
 2: function to update 1 pixel (input uint, uint, update storage) [require unique person, not voted yet]
 
-3: function to generate NFT of final image (automatically upload to IPFS and generate new ERC721 with return token URI)
+3: function to generate final image (automatically upload to IPFS and generate new ERC721 with return token URI)
 
-4: function to auction final NFT
+4: function to mint and auction final NFT using Tatum API
 
 5: function to vote on where auction funds are sent
 
