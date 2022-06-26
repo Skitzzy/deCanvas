@@ -23,7 +23,7 @@ Lens Protocol
 Cronos
 ```
 
-#Draft structure:
+# Draft structure:
 
 ---smart contract---
 
