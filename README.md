@@ -29,13 +29,13 @@ Draft structure:
 
 h x w grid of pixels
 
-store each pixel on chain ( mapping : uint -> uint ) 
+use solidity events as storage for pixels, creating a chain of update transactions to the canvas
 
-1: function to verify unique personhood (use worldcoin)
+1: function to verify unique personhood (use worldcoin), login using metamask or walletconnect
 
 2: function to update 1 pixel (input uint, uint, update storage) [require unique person, not voted yet]
 
-3: function to generate NFT of final image (stop ability to update after x hours)
+3: function to generate NFT of final image (automatically upload to IPFS and generate new ERC721 with return token URI)
 
 4: function to auction final NFT
 
@@ -49,7 +49,7 @@ display pixels on canvas (according to uint colour stored in array)
 
 menu to select colour from palette of colours
 
-gallery to display all previous canvases
+gallery to display all previous canvases, as well as gif of how each canvas was formed
 
 --web3 integrations--
 
