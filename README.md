@@ -11,6 +11,10 @@ The NFT will contain the final image as well as a gif timelapse of how the canva
 
 We use Worldcoin verification of unique personhood to stop people spamming the canvas, and Lens Protocol to provide a user profile of people who have contributed to the final art piece.
 
+Winner of Optimism Sponsor Prize (100 USD)
+
+Front-end reposittory can be found [here](https://github.com/pandaeater-dotcom/deCanvas-front).
+
 Technologies used:
 
 ```
